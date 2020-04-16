@@ -5,5 +5,11 @@ declare module "@capacitor/core" {
 }
 
 export interface AwesomePluginPlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  echo(options: { value: string }): Promise<{ value: string }>;
+  testEvent(): Promise<void>;
+  storeContact(options: {
+    yourName: string;
+    address: Object;
+    isAwesome: boolean;
+  }): Promise<void>;
 }

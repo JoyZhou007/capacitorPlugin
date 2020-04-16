@@ -12,10 +12,15 @@ public class AwesomePlugin extends Plugin {
     @PluginMethod()
     public void echo(PluginCall call) {
         String value = call.getString("value");
-
         JSObject ret = new JSObject();
         ret.put("value", value);
         call.success(ret);
+    }
+
+    @PluginMethod()
+    public void testEvent(PluginCall call) {
+        bridge.triggerWindowJSEvent("myCustomEvent", "{ 'dataKey': 'dataValue' }");
+        call.success();
     }
 
     @PluginMethod()
@@ -28,8 +33,6 @@ public class AwesomePlugin extends Plugin {
             call.reject("Must provide an id");
             return;
         }
-        // ...
-
         call.resolve();
     }
 }

@@ -9,4 +9,10 @@ export interface AwesomePluginPlugin {
     }): Promise<{
         value: string;
     }>;
+    testEvent(): Promise<void>;
+    storeContact(options: {
+        yourName: string;
+        address: Object;
+        isAwesome: boolean;
+    }): Promise<void>;
 }

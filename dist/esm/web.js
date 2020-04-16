@@ -7,23 +7,33 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { WebPlugin } from '@capacitor/core';
+import { WebPlugin } from "@capacitor/core";
 export class AwesomePluginWeb extends WebPlugin {
     constructor() {
         super({
-            name: 'AwesomePlugin',
-            platforms: ['web']
+            name: "AwesomePlugin",
+            platforms: ["web"],
+        });
+    }
+    testEvent() {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("listen test event success...");
+        });
+    }
+    storeContact(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("storContact", options);
         });
     }
     echo(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('ECHO', options);
+            console.log("ECHO", options);
             return options;
         });
     }
 }
 const AwesomePlugin = new AwesomePluginWeb();
 export { AwesomePlugin };
-import { registerWebPlugin } from '@capacitor/core';
+import { registerWebPlugin } from "@capacitor/core";
 registerWebPlugin(AwesomePlugin);
 //# sourceMappingURL=web.js.map
