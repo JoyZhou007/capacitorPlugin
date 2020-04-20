@@ -35,6 +35,7 @@ public class NfcPlugin extends Plugin {
     @Override
     protected void handleOnStart() {
         super.handleOnStart();
+        System.out.println("NfcPlugin----handleOnStart");
         initAdapter();
     }
 
@@ -71,13 +72,14 @@ public class NfcPlugin extends Plugin {
     protected void handleOnNewIntent(Intent intent) {
         super.handleOnNewIntent(intent);
 
+        System.out.println("NfcPlugin----handleOnNewIntent");
         PluginCall savedCall = getSavedCall();
         if (!hasRequiredPermissions()) {
             pluginRequestAllPermissions();
         } else {
             if (mNfcAdapter != null) { //有nfc功能
                 if (mNfcAdapter.isEnabled()) {//nfc功能打开了
-                    resolveIntent(intent,savedCall);
+                    resolveIntent(intent);
                 } else {
                     System.out.println("请打开nfc功能");
                 }
@@ -89,7 +91,7 @@ public class NfcPlugin extends Plugin {
     @Override
     protected void handleOnResume () {
         super.handleOnResume();
-        System.out.println( "onResume: ");
+        System.out.println("NfcPlugin----handleOnResume");
         if (mNfcAdapter != null) { //有nfc功能
             if (mNfcAdapter.isEnabled()) {
                 //nfc功能打开了
@@ -124,23 +126,24 @@ public class NfcPlugin extends Plugin {
     }
 
     //初次判断是什么类型的NFC卡
-    private void resolveIntent(Intent intent,PluginCall call) {
+    private void resolveIntent(Intent intent) {
         NdefMessage[] msgs = NfcUtil.getNdefMsg(intent); //重点功能，解析nfc标签中的数据
 
+        System.out.println("NfcPlugin----resolveIntent");
         if (msgs == null) {
             System.out.println("非NFC启动");
         } else {
-            setNFCMsgView(msgs,call);
+            setNFCMsgView(msgs);
         }
 
     }
 
     @SuppressLint("SetTextI18n")
-    @PluginMethod()
-    private void setNFCMsgView(NdefMessage[] ndefMessages,PluginCall call) {
+    private void setNFCMsgView(NdefMessage[] ndefMessages) {
         if (ndefMessages == null || ndefMessages.length == 0) {
             return;
         }
+        System.out.println("NfcPlugin----setNFCMsgView");
 
 //        Calendar calendar = Calendar.getInstance();
 //        int hour = calendar.get(Calendar.HOUR_OF_DAY);
@@ -155,13 +158,9 @@ public class NfcPlugin extends Plugin {
 //        }
 
 
-        if (call == null) {
-            return;
-        }
         bridge.triggerWindowJSEvent("NfcPluginIntentEvent", "{ 'nfcPluginIntentKey': 'nfcPluginIntentValue' }");
 //        JSObject ret = new JSObject();
 //        ret.put("dataKey", "dataValue");
-//        call.success(ret);
     }
 
     @PluginMethod()

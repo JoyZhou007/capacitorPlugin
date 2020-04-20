@@ -60,6 +60,7 @@ public class AwesomePlugin extends Plugin {
     @Override
     protected void handleOnStart() {
         super.handleOnStart();
+        System.out.println("AwesomePlugin----start");
         bridge.triggerWindowJSEvent("AwesomePluginStartEvent", "{ 'AwesomePluginStartKey': 'AwesomePluginStartValue' }");
         initAdapter();
     }
@@ -69,7 +70,7 @@ public class AwesomePlugin extends Plugin {
     protected void handleRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.handleRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        System.out.println("AwesomePlugin handling request perms result");
+        System.out.println("AwesomePlugin----handleRequestPermissionsResult");
         PluginCall savedCall = getSavedCall();
         if (savedCall == null) {
             System.out.println("AwesomePlugin No stored plugin call for permissions request result");
@@ -93,6 +94,7 @@ public class AwesomePlugin extends Plugin {
     protected void handleOnNewIntent(Intent intent) {
         super.handleOnNewIntent(intent);
 
+        System.out.println("AwesomePlugin----handleOnNewIntent");
         PluginCall savedCall = getSavedCall();
         if (!hasRequiredPermissions()) {
             pluginRequestAllPermissions();
@@ -126,6 +128,7 @@ public class AwesomePlugin extends Plugin {
     @Override
     protected void handleOnPause() {
         super.handleOnPause();
+        System.out.println( " AwesomePlugin handleOnPause: ");
         if (mNfcAdapter != null) {
 //            mNfcAdapter.disableForegroundDispatch(getActivity());
         }
