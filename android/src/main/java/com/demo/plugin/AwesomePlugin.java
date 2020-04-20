@@ -35,4 +35,8 @@ public class AwesomePlugin extends Plugin {
         }
         call.resolve();
     }
+
+    public void readMsg(){
+        bridge.triggerWindowJSEvent("readMsg", "{ 'dataKey': 'dataValue' }");
+    }
 }
