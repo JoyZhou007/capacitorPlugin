@@ -50,5 +50,8 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
 
-    api 'com.google.guava:guava:25.1-android'
-}
+//    api 'com.google.guava:guava:25.1-android'
+//    implementation ('com.google.guava:guava:25.1-android') {
+//        exclude group: 'com.google.guava:listenablefuture:1.0'
+//    }
+    }

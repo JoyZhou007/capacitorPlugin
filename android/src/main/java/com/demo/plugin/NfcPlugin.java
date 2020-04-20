@@ -11,15 +11,11 @@ import android.nfc.NfcAdapter;
 import android.util.Log;
 
 import com.demo.plugin.nfcread.NfcUtil;
-import com.demo.plugin.nfcread.ParsedNdefRecord;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-
-import java.util.Calendar;
-import java.util.List;
 
 
 @NativePlugin(
@@ -97,7 +93,7 @@ public class NfcPlugin extends Plugin {
             if (mNfcAdapter.isEnabled()) {
                 //nfc功能打开了
                 //隐式启动
-                mNfcAdapter.enableForegroundDispatch(getActivity(), mPendingIntent, null, null);
+//                mNfcAdapter.enableForegroundDispatch(getActivity(), mPendingIntent, null, null);
             } else {
                 System.out.println( "请打开nfc功能");
             }
@@ -108,7 +104,7 @@ public class NfcPlugin extends Plugin {
     protected void handleOnPause() {
         super.handleOnPause();
         if (mNfcAdapter != null) {
-            mNfcAdapter.disableForegroundDispatch(getActivity());
+//            mNfcAdapter.disableForegroundDispatch(getActivity());
         }
     }
 
@@ -143,18 +139,17 @@ public class NfcPlugin extends Plugin {
             return;
         }
 
-//        tvNFCMessage.setText("Payload:" + new String(ndefMessages[0].getRecords()[0].getPayload()) + "\n");
-        Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
-        ncfMsg.append(hour + ":" + minute + "\n");
-        List<ParsedNdefRecord> records = NfcUtil.parse(ndefMessages[0]);
-        final int size = records.size();
-        for (int i = 0; i < size; i++) {
-            ParsedNdefRecord record = records.get(i);
-            System.out.println("test==="+record.getViewText());
-            ncfMsg.append(record.getViewText() + "\n");
-        }
+//        Calendar calendar = Calendar.getInstance();
+//        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+//        int minute = calendar.get(Calendar.MINUTE);
+//        ncfMsg.append(hour + ":" + minute + "\n");
+//        List<ParsedNdefRecord> records = NfcUtil.parse(ndefMessages[0]);
+//        final int size = records.size();
+//        for (int i = 0; i < size; i++) {
+//            ParsedNdefRecord record = records.get(i);
+//            System.out.println("test==="+record.getViewText());
+//            ncfMsg.append(record.getViewText() + "\n");
+//        }
 
 
         if (call == null) {
