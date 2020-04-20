@@ -1,37 +1,41 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
+ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
 	package
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:3:7-45
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:3:7-45
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:3-4:14
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:3-6:14
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml:2:13-71
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:2:13-71
+uses-permission#android.permission.NFC
+ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:5:7-64
+	android:name
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml:5:24-61
 uses-sdk
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		ADDED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
-		INJECTED from E:\develop\gitWork\capacitorPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		ADDED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
+		INJECTED from C:\personal\myDemoPlugin\android\src\main\AndroidManifest.xml
