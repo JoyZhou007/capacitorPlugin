@@ -97,7 +97,7 @@ public class NfcPlugin extends Plugin {
             if (mNfcAdapter.isEnabled()) {
                 //nfc功能打开了
                 //隐式启动
-                mNfcAdapter.enableForegroundDispatch(getActivity(), mPendingIntent, null, null);
+//                mNfcAdapter.enableForegroundDispatch(getActivity(), mPendingIntent, null, null);
             } else {
                 System.out.println( "请打开nfc功能");
             }
@@ -108,7 +108,7 @@ public class NfcPlugin extends Plugin {
     protected void handleOnPause() {
         super.handleOnPause();
         if (mNfcAdapter != null) {
-            mNfcAdapter.disableForegroundDispatch(getActivity());
+//            mNfcAdapter.disableForegroundDispatch(getActivity());
         }
     }
 
