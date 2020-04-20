@@ -59,6 +59,7 @@ public class NfcPlugin extends Plugin {
         if (requestCode == NFC_REQUEST_PERMISSION) {
             // We got the permission
 //            resolveIntent(intent,savedCall);
+            System.out.println("权限获取成功");
         }else{
            getCurrentPosition(savedCall);
         }
@@ -118,6 +119,8 @@ public class NfcPlugin extends Plugin {
         mPendingIntent = PendingIntent.getActivity(getContext(), 0,
                 new Intent(getContext(), getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
 
+        bridge.triggerWindowJSEvent("NfcPluginStartEvent", "{ 'NfcPlugnStartKey': 'nfcPluginValueStart' }");
+
     }
 
     //初次判断是什么类型的NFC卡
@@ -155,8 +158,7 @@ public class NfcPlugin extends Plugin {
         if (call == null) {
             return;
         }
-        bridge.triggerWindowJSEvent("myCustomEvent", "{ 'dataKey': 'dataValue' }");
-        call.success();
+        bridge.triggerWindowJSEvent("NfcPluginIntentEvent", "{ 'nfcPluginIntentKey': 'nfcPluginIntentValue' }");
 //        JSObject ret = new JSObject();
 //        ret.put("dataKey", "dataValue");
 //        call.success(ret);
@@ -174,7 +176,6 @@ public class NfcPlugin extends Plugin {
                 if (mNfcAdapter.isEnabled()) {//nfc功能打开了
 //                    Intent intent = new Intent(Intent.ACTION_VIEW);
 //                    startActivityForResult(intent);
-
 //                    resolveIntent(intent,call);
                 } else {
                     System.out.println("请打开nfc功能");
@@ -192,8 +193,6 @@ public class NfcPlugin extends Plugin {
         call.success(ret);
     }
 
-    public void readMsg(){
-        bridge.triggerWindowJSEvent("readMsg", "{ 'dataKey': 'dataValue' }");
-    }
+
 
 }
